@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="/js/menu.js"></script>
+    <title>grid</title>
+</head>
+<body>
+<div class="container-fluid border border-secondar mt-3 rounded-3">
+    <h1 class="text-center">Bootstrap 그리드 시스템</h1>
+    <p class="fw-bold fs-3 text-center mt-3">12개 column으로 구성됨</p>
+    <div class="row mx-2 py-3 border rounded-3 border-primary border-3">
+        <div class="col">
+            <div class="p-3 bg-primary text-light">col 1, 나머지 자동 크기</div>
+            <div class="p-3 bg-success text-light">col 2</div>
+            <div class="p-3 bg-danger text-light">col 3</div>
+        </div>
+        <div class="col-6">
+            <div class="p-3 bg-primary text-light">col 1, 6개 크기</div>
+            <div class="p-3 bg-success text-light">col 2</div>
+            <div class="p-3 bg-danger text-light">col 3</div>
+        </div>
+        <div class="col-2">
+            <div class="p-3 bg-primary text-light">col 1 2개크기</div>
+            <div class="p-3 bg-black text-light">col 3</div>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col-sm-6 col-lg-3">
+            <div class="p-3 bg-primary text-light">col 1, 3개 크기</div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="p-3 bg-success text-light">col 2, 3개 크기</div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="p-3 bg-danger text-light">col 3, 3개 크기</div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+            <div class="p-3 bg-black text-light">col 4, 3개 크기</div>
+        </div>
+    </div>
+    <div class="row my-3 justify-content-center"> <!-- start, end, center, between -->
+        <div class="col-md-3">
+            <div class="p-3 bg-primary text-light">col 1, 3개 크기</div>
+        </div>
+        <div class="col-md-3">
+            <div class="p-3 bg-success text-light">col 2, 3개 크기</div>
+        </div>
+        <div class="col-md-3">
+            <div class="p-3 bg-danger text-light">col 3, 3개 크기</div>
+        </div>
+    </div>
+    <div class="row my-3 justify-content-between"> <!-- start, end, center, between,  -->
+        <div class="col-md-3">
+            <div class="p-3 bg-primary text-light">col 1, 3개 크기</div>
+        </div>
+        <div class="col-md-3">
+            <div class="p-3 bg-success text-light">col 2, 3개 크기</div>
+        </div>
+        <div class="col-md-3">
+            <div class="p-3 bg-danger text-light">col 3, 3개 크기</div>
+        </div>
+    </div>    
+</div>    
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,26 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>bootstrap</title>
-   <link rel="stylesheet" href="bootstrap.min.css">
-   <script src="bootstrap.min.js" defer></script>
+   <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+   <!-- <script src="bootstrap.min.js" defer></script> -->
+   <script src="/js/menu.js"></script>
 </head>
 <body>
-   <header>
-      <h1>Welcome to My Web Page</h1>
-   </header>
-   <main>
-      <section>
-         <h2>About Me</h2>
-         <p>This is a brief introduction about myself.</p>
-      </section>
-      <section>
-         <h2>My Projects</h2>
-         <p>Here are some of the projects I've worked on.</p>
-      </section>
-   </main>
-   <footer>
-      <p>&copy; 2023 My Web Page</p>
-   </footer>
+<div class="container-fluid border border-secondar mt-3 rounded-3">   
+   <h1>NOTE</h1>
+   <h2>vs code 설정</h2>
+   <ul>
+      <li>auto wrap: alt+z </li>
+   </ul>
+   <h2>bootstrap js 적용에 필요한 설정</h2>
+   <p>bootstrap.bundle.min.js는 aync 적용시에 head에서 하면안되고 body에 적용해야함
+      <pre class="border  border-start-4 border-end-0 border-top-0 border-bottom-0 border-secondary">
+   async function loadHeadLinks(){
+      let links = await fetch('/utils/links.html');
+      let linksText = await links.text();
+      여기에서 기존 document.head하면 안되고 body 끝에 삽입해야함
+      document.body.insertAdjacentHTML("afterbegin",linksText);
+   }      </pre>
+   </p>
+</div>
+<script src="/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
