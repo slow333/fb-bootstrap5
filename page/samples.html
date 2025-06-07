@@ -1,0 +1,351 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="/css/bootstrap-icons.css" rel="stylesheet" > -->
+  <title>the Book</title>
+  <script src="/js/menu.js"></script>
+</head>
+<body>
+<div class="m-7">.</div>
+
+<!-- main image & intro text -->
+<h1 class="text-center m-5"><i class="bi bi-book-half"></i> Container, Card, local nav, Accordions</h1>
+<h1 class="text-center">Icons <i class="bi bi-folder-symlink"></i>, 
+  Forms, tooltip, Modal(popup),offcanvas, tabs</h1>
+<section id="intro" class="bg-altlight">
+  <div class="container-lg">
+    <div class="row g-4 justify-content-center align-items-center">
+      <div class="col-md-5 text-center text-md-start">
+        <h1>
+          <div class="display-2">Black-Belt</div>
+          <div class="display-5 text-muted">Your Coding Skills</div>
+        </h1>
+        <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, dignissimos?</p>
+        <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+        <!-- open sidebar / offcanvas -->
+        <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button">더 많은 책을 보려면...</a>
+      </div>
+      <div class="col-md-5 text-center d-none d-md-block">
+        <!-- tooltip -->
+        <span class="my-tooltip" data-bs-placement="buttom" title="책의 표지를 나타냄">
+            <img src="/assets/ebook-cover.png" class="img-fluid" alt="ebook">
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- offcanvas , offcanvas-start/end -->
+<div class="offcanvas offcanvas-start" id="sidebar" tabindex="-1">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">My Other books</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul>
+      <li>list-1</li>
+      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, dolor!</li>
+      <li><a href="#goSomewhere"></a></li>
+    </ul>
+    <div class="dropdown mt-3">
+      <button class="btn btn-danger dropdown-toggle" type="button" 
+            data-bs-toggle="dropdown">This is dropdown</button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/page/samples.html#pricing">CARD</a></li>
+        <li><a class="dropdown-item" href="/page/samples.html#topics">ACCORDIONS</a></li>
+        <li><a class="dropdown-item" href="/page/samples.html#reviews">LIST</a></li>
+        <li><a class="dropdown-item" href="/page/samples.html#contact">FORMS</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Go TOP</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  <!-- pricing plans -->
+  <h2 class="text-center m-5 fw-bolder text-decoration-underline">ABOUT CARD</h2>
+  <section id="pricing" class="bg-light mt-3">
+    <div class="container-lg">
+      <h2 class="text-center mb-4">Pricing Plans</h2>
+      <div class="row g-4 justify-content-center gap-0">
+        <div class="col-8 col-lg-3 col-xl-4">
+          <div class="card text-center">
+            <div class="card-header bg-primary text-white">Basic Plan</div>
+            <div class="card-body">
+              <h5 class="card-title">$19.99</h5>
+              <p class="card-text text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <a href="#" class="btn btn-outline-primary">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-9 col-lg-4">
+          <div class="card text-center">
+            <div class="card-header bg-success text-white">Pro Plan</div>
+            <div class="card-body">
+              <h4 class="card-title">이거 좋아요!!! 추천 👌</h4>
+              <h5 class="lead card-subtitle">$39.99</h5>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis vitae corrupti, ea amet dolore atque. Officiis ex ea laudantium perferendis alias consectetur.</p>
+              <a href="#" class="btn btn-success">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-8 col-lg-3 col-xl-4">
+          <div class="card text-center">
+            <div class="card-header bg-danger text-white">Premium Plan</div>
+            <div class="card-body">
+              <h5 class="card-title">$59.99</h5>
+              <p class="card-text"> Lorem ipsum, dolor stium rem minus totam?.</p>
+              <a href="#" class="btn btn-danger">Choose Plan</a>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <!-- topics at a glance -->
+  <h2 class="text-center m-5 fw-bolder text-decoration-underline">ABOUT Accordions</h2>
+  <section id="topics">
+    <div class="container-md">
+      <div class="tex-center">
+        <h2 class="text-center mb-4">Topics at a Glance</h2>
+        <p class="lead text-muted">이책에 대한 소개입니다.</p>
+      </div>
+      <div class="row my-5 g-1 justify-content-around align-items-center">
+        <div class="col-6 col-lg-4">
+          <img src="/assets/kindle.png" class="img-fluid" alt="ebook">
+        </div>
+        <div class="col-lg-6">
+          <div class="accordion" id="chapters">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#chapter-1" >
+                  Chapter 1: Introduction
+                </button>
+              </h2>
+              <div id="chapter-1" class="accordion-collapse collapse show" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nobis error temporibus quia dolorem consequuntur magnam numquam illo excepturi fuga minima dolores praesentium sunt libero earum, suscipit et nam nulla.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" 
+                  data-bs-toggle="collapse" data-bs-target="#chapter-2">
+                  Chapter 2: Getting Started
+                </button>
+              </h2>
+              <div id="chapter-2" class="accordion-collapse collapse" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ut sunt repellendus eligendi accusamus at blanditiis corrupti delectus, unde labore quibusdam quae aut aspernatur adipisci illo magni, perferendis pariatur?.
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ipsam autem ea voluptates ratione voluptate sed repudiandae nostrum, omnis tempora.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" 
+                  data-bs-toggle="collapse" data-bs-target="#chapter-3"> Chapter 3: Core Concepts
+                </button>
+              </h2>
+              <div id="chapter-3" class="accordion-collapse collapse" 
+                data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae doloremque? Amet culpa est cupiditate! Minima eveniet sit distinctio voluptatibus expedita, saepe magnam hic excepturi optio, repellat possimus aspernatur eius architecto officiis? Consequuntur expedita ducimus maxime et atque iusto sed.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" 
+                  data-bs-toggle="collapse" data-bs-target="#chapter-4">Chapter 4: Advanced Topics
+                </button>
+              </h2>
+              <div id="chapter-4" class="accordion-collapse collapse" 
+                data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae doloremque? Amet culpa est cupiditate! Minima eveniet sit distinctio voluptatibus expedita, saepe magnam hic excepturi optio, repellat possimus aspernatur eius architecto officiis? Consequuntur expedita ducimus maxime et atque iusto sed.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- reviews list -->
+  <h2 class="text-center m-5 fw-bolder text-decoration-underline">ABOUT List</h2>
+  <section id="reviews" class="bg-light mt-3">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2><i class="bi bi-stars"></i> Book Rewiews</h2>
+        <p class="lead">이 책에 대한 나의 감상평은 ...</p>
+      </div>
+      <div class="row justify-content-center my-3">
+        <div class="col-lg-10">
+          <div class="list-group">
+            <div class="list-group-item py-2">
+              <div class="pb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <h5 class="mb-1 text-altdark">이책은 필요하면 사세요..</h5>
+              <p class="mb-1 text-altdark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis ipsa eaque excepturi quidem in, saepe iure, commodi enim fuga, eum totam qui earum fugit quaerat corrupti? Iste quasi accusamus facilis vel? Asperiores ipsa at exercitationem odit ducimus excepturi deleniti sint corrupti molestias delectus et, aliquam, consequuntur itaque, laboriosam unde distinctio.</p>
+              <small class="text-muted">작성자: 홍길동</small>
+            </div>
+            <div class="list-group-item py-2">
+              <h5 class="mb-1 text-altdark">이책은 필요하면 사세요..</h5>
+              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+              <small class="text-muted">작성자: 홍길동</small>
+            </div>
+            <div class="list-group-item py-2">
+              <h5 class="mb-1">이책은 필요하면 사세요..</h5>
+              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+              <small class="text-muted">작성자: 홍길동</small>
+            </div>
+            <div class="list-group-item py-2">
+              <h5 class="mb-1">이책은 필요하면 사세요..</h5>
+              <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+              <small class="text-muted">작성자: 홍길동</small>
+            </div>                        
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact form -->
+<h2 class="text-center mt-5 fw-bolder text-decoration-underline">ABOUT FORMS</h2>
+<h4 class="text-center mb-5">(form-control, form-label, form-select, input-group, input-group-text)</h4>
+<section id="contact">
+  <div class="container-lg">
+    <div class="text-center">
+      <h2>연락 주세요</h2>
+      <p class="lead">궁금한 점이 있으면 아래로 연락 주세요.</p>
+    </div>
+    <div class="row justify-content-center my-4">
+      <div class="col-lg-6"> <!-- large 부터 6을 갖고 이것보다 적으면 전체 12를 갖음 -->
+        <form action="/api/v1/sendmail">
+          <label for="email" class="form-label">email address : </label>
+          <div class="mb-3 input-group">
+            <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+            <input type="email" class="form-control" id="email" name="email" placeholder="email">
+            <!-- tooltip -->
+            <span class="my-tooltip" data-bs-placement="buttom" title="email을 입력해주세요.">
+              <span class="input-group-text"><i class="bi bi-question-circle muted"></i></span>
+            </span>
+          </div>
+          <label for="name" class="form-label">Name : </label>
+          <div class="mb-3 input-group">
+            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+            <input type="text" class="form-control" id="name" name="name" placeholder="your name">
+            <!-- tooltip -->
+            <span class="my-tooltip" data-bs-placement="buttom" title="이름을 입력해주세요.">
+              <span class="input-group-text"><i class="bi bi-question-circle muted"></i></span>
+            </span>
+          </div>
+          <label for="subject" class="form-label">Select Question type</label>
+          <div class="input-group mb-4">
+            <span class="input-group-text"><i class="bi bi-check2-circle"></i></span>
+            <select name="subject" id="subject" class="form-select">
+              <option value="pricing" selected>Pricing Query</option>
+              <option value="content">Content</option>
+              <option value="other" selected>Other Query</option>
+            </select>
+          </div>
+          <div class="form-floating mt-2">
+            <textarea class="form-control" id="question" style="height: 140px;"></textarea>
+            <label for="question">Your Question... </label>
+          </div>
+          <div class="text-center mt-4" >
+            <button type="submit" class="btn btn-secondary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- get updates / modal trigger -->
+<section class="bg-light">
+  <div class="container">
+    <div class="text-center">
+      <h2>모달에 대한 이벤트...</h2>
+      <p class="lead">최근에 발생한 일에 대해 알고 싶으시면...</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center">
+        <p class="text-muted my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod hic eos dignissimos quam vel optio! Et, laborum perspiciatis! Voluptatibus magnam nesciunt distinctio quisquam vero aperiam dignissimos incidunt ab illum quibusdam enim nihil placeat, labore ipsum quo esse obcaecati sed laborum accusamus praesentium reprehenderit sunt? Temporibus itaque ullam placeat eum nulla.</p>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
+          업데이트 정보를 받고 싶으면
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- 모달 내용 -->
+  <div id="reg-modal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">최근 정보</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reiciendis voluptatibus beatae adipisci quam, distinctio accusamus neque nesciunt expedita quae ea quasi, quisquam vitae sed! Atque impedit odit animi eius.</p>
+          <label for="modal-email" class="form-label">email ????</label>
+          <input type="eamil" class="form-control" id="modal-email">
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary">Submit</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- tabs -->
+<div class="container my-5" id="tabs">
+  <nav>
+    <div class="nav nav-tabs" id="inav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+      data-bs-target="#nav-home" type="button" role="tab">HOME</button>
+
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+      data-bs-target="#nav-profile" type="button" role="tab">Profile</button>
+
+      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
+      data-bs-target="#nav-contact" type="button" role="tab">Contact</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tab-content">
+    <div class="tab-pane fade show active py-3" id="nav-home">
+      <h2>Home</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum quod eos non quam repudiandae delectus perferendis, suscipit officiis veniam harum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nihil? Blanditiis molestias nostrum earum unde corporis perferendis. Minus voluptatum odio quam? Dolores fugiat, magni tenetur quia accusantium facilis et reiciendis?</p>
+    </div>
+    <div class="tab-pane fade py-3" id="nav-profile">
+      <h2>Profile</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum quod eos non quam repudiandae delectus perferendis, suscipit officiis veniam harum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nihil? Blanditiis molestias nostrum earum unde corporis perferendis. Minus voluptatum odio quam? Dolores fugiat, magni tenetur quia accusantium facilis et reiciendis?</p>
+    </div>    
+    <div class="tab-pane fade py-3" id="nav-contact">
+      <h2>Contact</h2>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum quod eos non quam repudiandae delectus perferendis, suscipit officiis veniam harum?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, nihil? Blanditiis molestias nostrum earum unde corporis perferendis. Minus voluptatum odio quam? Dolores fugiat, magni tenetur quia accusantium facilis et reiciendis?</p>
+    </div>
+  </div>
+</div>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
+<script>
+  const tooltips = document.querySelectorAll(".my-tooltip");
+  tooltips.forEach(tooltip => {
+    new bootstrap.Tooltip(tooltip)
+  });
+</script>
+</body>
+</html>

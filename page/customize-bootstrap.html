@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link href="/css/bootstrap-icons.css" rel="stylesheet" > -->
+  <title>the Book</title>
+  <script src="/js/menu.js"></script>
+</head>
+<body>
+<div class="m-7">.</div>
+
+<!-- main image & intro text -->
+<h1 class="text-center m-5 bg-altlight">CUSOMIZE BOOTSTRAP DEFAULT COLORS, ETC...</h1>
+<section class="bg-light">
+  <h2 class="text-center">Bootstrap Customize</h2>
+  <div class="list-group mt-3">
+    <h2>sass 설정하기</h2>
+    <div class="list-group-item">node js 설치 필요</div>
+    <div class="list-group-item">npm init 실행; project root 에 package.json파일이 생성됨</div>
+    <div class="list-group-item">npm install bootstrap </div>
+    <div class="list-group-item">/node_modules/bootstrap/scss에 가서 _valiables.scss에 보면 기본 설정된 값이 있음</div>
+    <div class="list-group-item">이걸 수정하기 위해서는 /scss/main.scss 를 생성</div>
+    <div class="list-group-item">/sass/main.scss 파일 생성, 기본 color 값 변경
+      <pre>// main.scss
+  $primary: #c29938; // 이렇게 하면 기본 값을 override 함.
+  //bootstrap.scss 파일에 링크가 있어서 전체를 가져옮, scss 확장자 불필요
+  @import '../node_modules/bootstrap/scss/booststrap';</pre>  
+    </div>
+    <h3 class="mt-4">sass 컴파일하기</h3>
+    <div class="list-group-item">vs code extenstion에서 live sass compiler 설치, 자동으로 scss를 컴파일해서 css로 변환</div>
+    <div class="list-group-item">vs code settings : live sass format, 컴파일된 파일의 경로, 파일 위치 등을 정의</div>
+    <div class="list-group-item">live sass formats > settings: formats > edit in settings.json
+      <br>"/css/main.min-5-3.css"에 main.scss에서 정의한 내용으로 bootstrap 설정을 덮어 씀
+      <pre>"liveSassCompile.settings.formats": [
+        // {
+        //     "format": "expanded",
+        //     "extensionName": ".css",
+        //     "savePath": null,
+        //     "savePathReplacementPairs": null
+        // }
+        {
+          "format": "compressed",
+          "extensionName": ".min-5-3.css",
+          "savePath": "/css",
+          "savePathReplacementPairs": null
+        }
+    ],</pre>
+    </div>
+    <div class="list-group-item">vs code 하단 작업표시줄에서 watch sass 눌러야함</div>
+    <div class="list-group-item">/css/main.min-5-3.css 파일이 생성됨 -> 이파일을 css로 설정함</div>
+    <div class="list-group-item">theme color에 사용자 정의 색 추가하기
+      <pre>// import bootstrap
+// 이렇게 하면 기본 값을 override 함.
+$primary: #c29938; 
+$light: #f5e9cf;
+
+// theme color에 내가 설정한 색을 추가하기
+@import "../node_modules/bootstrap/scss/functions";
+@import '../node_modules/bootstrap/scss/variables';
+
+$custom-theme-colors: (
+  "altlight": rgba(241, 183, 237, 0.733),
+  "altdark": rgb(100, 3, 3)
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+@import '../node_modules/bootstrap/scss/bootstrap';</pre>
+      </div>
+  </div>
+</section>
+
+</body>
+</html>

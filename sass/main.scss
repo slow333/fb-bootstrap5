@@ -1,0 +1,17 @@
+// import bootstrap
+// 이렇게 하면 기본 값을 override 함.
+$primary: #000f41; 
+$light: #f5e9cf;
+
+// theme color에 내가 설정한 색을 추가하기
+@import "../node_modules/bootstrap/scss/functions";
+@import '../node_modules/bootstrap/scss/variables';
+
+$custom-theme-colors: (
+  "altlight": rgba(241, 183, 237, 0.733),
+  "altdark": rgb(100, 3, 3)
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+@import '../node_modules/bootstrap/scss/bootstrap';

@@ -5,62 +5,85 @@
     <title>grid</title>
 </head>
 <body>
-<div class="container-fluid border border-secondar mt-3 rounded-3">
-    <h1 class="text-center">Bootstrap 그리드 시스템</h1>
-    <p class="fw-bold fs-3 text-center mt-3">12개 column으로 구성됨</p>
-    <div class="row mx-2 py-3 border rounded-3 border-primary border-3">
-        <div class="col">
-            <div class="p-3 bg-primary text-light">col 1, 나머지 자동 크기</div>
-            <div class="p-3 bg-success text-light">col 2</div>
-            <div class="p-3 bg-danger text-light">col 3</div>
-        </div>
-        <div class="col-6">
-            <div class="p-3 bg-primary text-light">col 1, 6개 크기</div>
-            <div class="p-3 bg-success text-light">col 2</div>
-            <div class="p-3 bg-danger text-light">col 3</div>
-        </div>
-        <div class="col-2">
-            <div class="p-3 bg-primary text-light">col 1 2개크기</div>
-            <div class="p-3 bg-black text-light">col 3</div>
-        </div>
+<div style="margin-top: 30px; color:white">.</div>
+<section id="intro">
+<h1 class="text-center">Bootstrap 그리드 시스템</h1>
+  <p class="fw-bold fs-3 text-center mt-3">12개 column으로 구성됨</p>
+  <div class="row mx-2 py-3 border rounded-3 border-primary border-3">
+      <div class="col">
+          <div class="p-3 bg-primary text-light">col 1, 나머지 자동 크기</div>
+          <div class="p-3 bg-success text-light">col 2</div>
+          <div class="p-3 bg-danger text-light">col 3</div>
+      </div>
+      <div class="col-6">
+          <div class="p-3 bg-primary text-light">col 1, 6개 크기</div>
+          <div class="p-3 bg-success text-light">col 2</div>
+          <div class="p-3 bg-danger text-light">col 3</div>
+      </div>
+      <div class="col-2">
+          <div class="p-3 bg-primary text-light">col 1 2개크기</div>
+          <div class="p-3 bg-black text-light">col 3</div>
+      </div>
+  </div>
+  <div class="row my-3">
+    <p>화면 크기에 따른 조정: small 6,6 / 6,6; large 3,3,3,3</p>
+      <div class="col-sm-6 col-lg-3">
+          <div class="p-3 bg-primary text-light">col 1, 3개 크기</div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+          <div class="p-3 bg-success text-light">col 2, 3개 크기</div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+          <div class="p-3 bg-danger text-light">col 3, 3개 크기</div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+          <div class="p-3 bg-black text-light">col 4, 3개 크기</div>
+      </div>
+  </div>
+  <div class="row my-3 justify-content-center"> <!-- start, end, center, between -->
+      <div class="col-md-3">
+          <div class="p-3 bg-primary text-light">col 1, 3개 크기</div>
+      </div>
+      <div class="col-md-3">
+          <div class="p-3 bg-success text-light">col 2, 3개 크기</div>
+      </div>
+      <div class="col-md-3">
+          <div class="p-3 bg-danger text-light">col 3, 3개 크기</div>
+      </div>
+  </div>
+  <div class="row my-3 justify-content-between"> <!-- start, end, center, between,  -->
+    <div class="col-md-3">
+      <div class="p-3 bg-primary text-light">col 1, 3개 크기</div>
     </div>
-    <div class="row my-3">
-        <div class="col-sm-6 col-lg-3">
-            <div class="p-3 bg-primary text-light">col 1, 3개 크기</div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-            <div class="p-3 bg-success text-light">col 2, 3개 크기</div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-            <div class="p-3 bg-danger text-light">col 3, 3개 크기</div>
-        </div>
-        <div class="col-sm-6 col-lg-3">
-            <div class="p-3 bg-black text-light">col 4, 3개 크기</div>
-        </div>
+    <div class="col-md-3">
+      <div class="p-3 bg-success text-light">col 2, 3개 크기</div>
     </div>
-    <div class="row my-3 justify-content-center"> <!-- start, end, center, between -->
-        <div class="col-md-3">
-            <div class="p-3 bg-primary text-light">col 1, 3개 크기</div>
-        </div>
-        <div class="col-md-3">
-            <div class="p-3 bg-success text-light">col 2, 3개 크기</div>
-        </div>
-        <div class="col-md-3">
-            <div class="p-3 bg-danger text-light">col 3, 3개 크기</div>
-        </div>
+    <div class="col-md-3">
+      <div class="p-3 bg-danger text-light">col 3, 3개 크기</div>
     </div>
-    <div class="row my-3 justify-content-between"> <!-- start, end, center, between,  -->
-        <div class="col-md-3">
-            <div class="p-3 bg-primary text-light">col 1, 3개 크기</div>
-        </div>
-        <div class="col-md-3">
-            <div class="p-3 bg-success text-light">col 2, 3개 크기</div>
-        </div>
-        <div class="col-md-3">
-            <div class="p-3 bg-danger text-light">col 3, 3개 크기</div>
-        </div>
-    </div>    
-</div>    
-<script src="/js/bootstrap.bundle.min.js"></script>
+  </div>    
+</section>
+<!-- <section id="intro">
+	<div class="container-lg">
+		<div class="row justify-content-center align-items-center">
+			<div class="col-md-5 text-center text-md-start">
+				<p>전체 정렬은 가운데이고, md에서는 왼쪽 정렬</p>
+				<small>화면이 줄면 가운데 정렬로 바뀜</small>
+				<h1>
+					<div class="display-2">책광고</div>
+					<div class="display-5 text-muted">책에 대한 설정</div>
+				</h1>
+				<p class="lead my-4 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis!</p>
+				<a href="#" class="btn btn-secondary btn-lg">Buy Now</a>
+			</div>
+			<div class="col-md-5 text-center d-none d-md-block">
+				<p>화면이 줄면 그림이 사라짐</p>
+				<small>그림에 img-fluid 하면 자동으로 크기가 조절됨</small>
+				<img class="img-fluid" src="/assets/ebook-cover.png" alt="ebook">
+			</div>
+		</div>
+	</div>
+</section> -->
+<!-- <script src="/js/bootstrap.bundle.min-5-3.js"></script> -->
 </body>
 </html>

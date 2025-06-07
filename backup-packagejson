@@ -1,0 +1,2 @@
+{
+  "0":{"indentRainbow.includedLanguages":[],"indentRainbow.excludedLanguages":["plaintext"],"indentRainbow.updateDelay":100},"name":"bootstrap5","version":"1.0.0","description":"","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"repository":{"type":"git","url":"git+https://github.com/slow333/fb-bootstrap5.git"},"author":"","license":"ISC","bugs":{"url":"https://github.com/slow333/fb-bootstrap5/issues"},"homepage":"https://github.com/slow333/fb-bootstrap5#readme"}

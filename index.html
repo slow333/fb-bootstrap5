@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>bootstrap</title>
-   <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
-   <!-- <script src="bootstrap.min.js" defer></script> -->
-   <script src="/js/menu.js"></script>
+  <title>bootstrap</title>
+  <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+  <!-- <script src="bootstrap.min.js" defer></script> -->
+  <script src="/js/menu.js"></script>
 </head>
 <body>
+<div style="margin-top: 30px">.</div>
 <div class="container-fluid border border-secondar mt-3 rounded-3">   
-   <h1>NOTE</h1>
-   <h2>vs code 설정</h2>
-   <ul>
-      <li>auto wrap: alt+z </li>
-   </ul>
-   <h2>bootstrap js 적용에 필요한 설정</h2>
-   <p>bootstrap.bundle.min.js는 aync 적용시에 head에서 하면안되고 body에 적용해야함
-      <pre class="border  border-start-4 border-end-0 border-top-0 border-bottom-0 border-secondary">
-   async function loadHeadLinks(){
-      let links = await fetch('/utils/links.html');
-      let linksText = await links.text();
-      여기에서 기존 document.head하면 안되고 body 끝에 삽입해야함
-      document.body.insertAdjacentHTML("afterbegin",linksText);
-   }      </pre>
-   </p>
+  <h1>NOTE</h1>
+  <h2>vs code 설정</h2>
+  <ul>
+    <li>auto wrap: alt+z </li>
+    <li>format on save: ctrl+shift+p -> format document</li>
+    <li>tab : 아래 상태바에서 spaces 를 누름</li>
+  </ul>
+  <h2>bootstrap js 적용에 필요한 설정</h2>
+  <p>bootstrap.bundle.min.js를 menu에서 공통으로 적용하려면
+    <pre>
+async function loadBootstrapJs() {
+  let bootstrapJs = document.createElement('script');
+  bootstrapJs.src = '/js/bootstrap.bundle.min-5-3.js';
+  document.body.appendChild(bootstrapJs);
+} </pre>
+  </p>
 </div>
-<script src="/js/bootstrap.bundle.min.js"></script>
+<h2>bootstrap icons 사용 방법</h2>
+<p>static으로 import 해서 사용하기 위해서는 css, woff, woff2 파일 필요</p>
+<p>css 파일에서 woff, woff2 파일 경로 지정 필요</p>
+
+<!-- <script src="/js/bootstrap.bundle.min.js"></script> -->
 </body>
 </html>
